@@ -1,9 +1,12 @@
-div id="#{dom_id object}_watchlist_button"
+
+- object.watchlist_action_names.each do |name|
+
+  div id="#{dom_id object, name}_watchlist_button"
   - if current_user.danger_terms.exists?(object.id)
-    = button_to 'Remove from Danger Watchlist', watchlist_path(object), class: 'btn btn-outline-danger',
+      = button_to "Remove from #{name.titleze} Watchlist", watchlist_path(object), class: 'btn btn-outline-danger',
       remote: true, method: :delete
   - else
-    = button_to 'Add to Danger Watchlist', watchlists_path(Watchlist.new, 
+      = button_to "Add to #{name} Watchlist", watchlists_path(Watchlist.new, 
       watchlist: {name: 'danger_terms', object_id: object.id}), class: 'btn btn-outline-primary', remote: true, method: :post
 
 

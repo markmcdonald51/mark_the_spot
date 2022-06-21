@@ -1,6 +1,6 @@
 module Watchlistable
     extend ActiveSupport::Concern
-    attr_reader :wachlist_action_names
+    attr_reader :watchlist_action_names
   
     #included do
     #  puts "Called"
