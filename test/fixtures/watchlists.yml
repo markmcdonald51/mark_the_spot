@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  watchlist_type: 1
+  rating: 1
+  watchable: one
+  watchable_type: Watchable
+
+two:
+  user: two
+  watchlist_type: 1
+  rating: 1
+  watchable: two
+  watchable_type: Watchable
