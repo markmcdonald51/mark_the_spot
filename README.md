@@ -41,6 +41,9 @@ has_many :like_terms
 ## Installation
 Add this line to your application's Gemfile:
 
+run:  rails mark_the_spot_engine:install:migrations
+      rails db:migrate
+
 ```ruby
 gem "mark_the_spot"
 ```
